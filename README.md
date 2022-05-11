@@ -78,9 +78,5 @@ Example jamovi analyses with data, from the book, are given in the **Test Data A
 I would be interested in feedback <pcahusac@alfaisal.edu>          Peter Cahusac  
 
 <figure>
-<img src="https://github.com/PeterC-alfaisal/Likelihood/blob/master/jam_screen.jpeg" id="id" class="class" style="width:60.0%;height:60.0%" />
+<img src="https://github.com/PeterC-alfaisal/Likelihood/blob/44eb93703f0db88530283526be9b8cc52fe5077c/jam_screen.jpg" id="id" class="class" style="width:60.0%;height:60.0%" />
 </figure>
-
-<figure>
-<img src="https://github.com/PeterC-alfaisal/likelihoodR/blob/master/Rplot.jpeg" id="id" class="class" style="width:60.0%;height:60.0%" />
-</figure> 
