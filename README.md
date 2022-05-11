@@ -77,6 +77,8 @@ Example jamovi analyses with data, from the book, are given in the **Test Data A
 
 I would be interested in feedback <pcahusac@alfaisal.edu>          Peter Cahusac  
 
+Below is a sample screenshot from jamovi showing the acquisition and results for an odds ratio analysis of the MRC study (1991) of neural tube
+defects in babies born to mothers receiving either folic acid or placebo (double-blind randomized study), see pp 146 - 151 in Cahusac (2020) book.
 <figure>
 <img src="https://github.com/PeterC-alfaisal/Likelihood/blob/44eb93703f0db88530283526be9b8cc52fe5077c/jam_screen.jpg" id="id" class="class" style="width:60.0%;height:60.0%" />
 </figure>
