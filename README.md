@@ -24,9 +24,9 @@ support values are insensitive to transforms.
 	2	Moderate evidence
 	3	Strong evidence
 	4	Extremely strong evidence
-**Table 1:** Interpretation for values of S, the support, calculated as the natural logarithm of the likelihood
+**Table 1:** _Interpretation for values of S, the support, calculated as the natural logarithm of the likelihood
 ratio. Negative values would represent support for hypothesis values H2 vs H1. Typically, it is
-sufficient to give S to one decimal place.
+sufficient to give S to one decimal place._
 
 Support values give the relative strength of evidence for one hypothesis 
 value versus another, see Table 1. They range from negative infinity to positive infinity. 
@@ -72,8 +72,8 @@ The analyses in the module complement my recent book: [Cahusac, P.M.B.
 (2020) Evidence-Based Statistics, Wiley](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119549833)  
 [Amazon.co.uk](https://www.amazon.co.uk/Evidence-Based-Statistics-Introduction-Evidential-Statistical/dp/1119549809/)  
 
-In jamovi the .jmo module can be sideloaded, and will appear among the other modules.
-Example jamovi analyses with data, from the book, are given in the **Test Data Analyses** folder.
+In jamovi the **.jmo** file can be sideloaded, and the module will appear among the other modules.
+Example jamovi analyses with data from the book are given in the **Test Data Analyses** folder.
 
 I would be interested in feedback <pcahusac@alfaisal.edu>          Peter Cahusac  
 
