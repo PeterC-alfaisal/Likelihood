@@ -79,4 +79,6 @@ I would be interested in feedback <pcahusac@alfaisal.edu>          Peter Cahusac
 
 <figure>
 <img src="https://github.com/PeterC-alfaisal/Likelihood/blob/master/jam_screen.jpeg" id="id" class="class" style="width:60.0%;height:60.0%" />
-</figure> 
+</figure>
+
+
