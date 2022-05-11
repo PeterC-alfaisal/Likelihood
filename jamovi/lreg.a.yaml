@@ -1,0 +1,77 @@
+---
+name:  Lreg
+title: LR Polynomial Regression
+menuGroup: Likelihood
+menuSubgroup: Regression & Correlation
+menuTitle: LR Polynomial Regression
+version: '1.0.0'
+jas: '1.2'
+
+description:
+    main: >
+        Polynomial regression of two variables where different orders can
+        be compared.
+
+completeWhenFilled: true
+
+options:
+    - name: data
+      type: Data
+
+    - name: dep
+      title: Dependent Variable
+      type: Variable
+      required: true
+      suggested:
+        - continuous
+      permitted:
+        - numeric
+      rejectInf: false
+
+    - name: pred
+      title: Predictor Variable
+      type: Variable
+      required: true
+      suggested:
+        - continuous
+      permitted:
+        - numeric
+      rejectInf: false
+
+    - name: plt
+      title: Scatterplot
+      type: Bool
+      default: false
+
+    - name: lin
+      title: Linear
+      type: Bool
+      default: true
+
+    - name: quad
+      title: Quadratic
+      type: Bool
+      default: false
+
+    - name: cub
+      title: Cubic
+      type: Bool
+      default: false
+
+    - name: quart
+      title: Quartic
+      type: Bool
+      default: false
+
+    - name: lint
+      title: Support level
+      type: Number
+      min: 1
+      max: 100
+      default: 2
+      description:
+          R: >
+            a number between 1 and 100 (default: 2) specifying the likelihood
+            support interval width
+
+...

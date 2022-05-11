@@ -1,0 +1,73 @@
+title: LR Independent Samples t-Test
+name: l2sttest
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Dependent Variable
+        children:
+          - type: VariablesListBox
+            name: dep
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Grouping Variable
+        children:
+          - type: VariablesListBox
+            name: group
+            maxItemCount: 1
+            isTarget: true
+            
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: LayoutBox
+        cell:
+            column: 0
+            row: 0
+        stretchFactor: 1
+        children:
+          - type: Label
+            label: Settings
+            children:
+              - type: LayoutBox
+                margin: large
+                children:
+                  - type: TextBox
+                    name: nul
+                    format: number
+                  - type: TextBox
+                    name: alt
+                    format: number
+                  - type: TextBox
+                    name: lint
+                    format: number
+                  - type: LayoutBox
+                    margin: large
+                    children:
+                      - type: CheckBox
+                        name: pll
+                      - type: LayoutBox
+                        margin: large
+                        children:
+                          - type: CheckBox
+                            name: welch
+                        
+      - type: LayoutBox
+        cell:
+          column: 1
+          row: 0
+        stretchFactor: 0
+        children:
+          - type: Label
+            label: Descriptives
+            children:
+              - type: CheckBox
+                name: dtab
+              - type: CheckBox
+                name: plt

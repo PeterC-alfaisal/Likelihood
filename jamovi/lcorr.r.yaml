@@ -1,0 +1,69 @@
+---
+name:  Lcorr
+title: LR Correlation
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: Log likelihood ratio analysis
+      type:  Preformatted
+      
+    - name:  lcor
+      title: Correlation
+      type: Table
+      rows:  3
+      columns:
+        - name: var
+          title: ''
+          type: text
+        - name: Value
+          type: number
+        - name: rdiff
+          title: Difference
+          type: number
+        - name: S
+          type: number
+        - name: t
+          type: number
+        - name: df
+          type: number
+        - name: p
+          type: number
+          format: zto,pvalue
+
+    - name:  lcor1
+      title: 'Intervals'
+      type: Table
+      rows:  2
+      refs:
+          - Aitkin
+      columns:
+        - name: Interval
+          title: Type of interval
+          type: text
+        - name: Level
+          type: text
+        - name: r
+          type: number
+        - name: Lower
+          type: number
+        - name: Upper
+          type: number
+
+    - name: plotc
+      title: '`Likelihood function with S-{lint} support interval`'
+      type: Image
+      width:  500
+      height: 400
+      renderFun: .plotc
+      visible: false
+
+    - name: plot
+      title: Scatterplot
+      type: Image
+      width:  500
+      height: 450
+      renderFun: .plot
+      visible: false
+
+...

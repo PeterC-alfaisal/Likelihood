@@ -1,0 +1,105 @@
+---
+name:  mcnem
+title: McNemar Paired Test
+jrs:   '1.1'
+
+items:
+    - name: freqs
+      title: Contingency Tables
+      type: Table
+      description: a proportions table
+      columns: [ ]
+      clearWith:
+        - rows
+        - cols
+        - counts
+
+    - name:  text
+      title: Log likelihood ratio analysis
+      type:  Preformatted
+
+    - name:  ctt
+      title: Odds analyses
+      type: Table
+      rows:  3
+      columns:
+        - name: var
+          title: ''
+          type: text
+        - name: Value
+          title: Odds Value
+          type: number
+        - name: ordiff
+          title: Difference
+          type: number
+        - name: S
+          type: number
+        - name: G
+          type: number
+        - name: df
+          type: integer
+        - name: p
+          type: number
+          format: zto,pvalue
+
+    - name:  ctt2
+      title: 'Intervals'
+      type: Table
+      rows:  3
+      columns:
+        - name: Interval
+          title: Type of interval
+          type: text
+        - name: Level
+          type: text
+        - name: Odds
+          title: Statistic
+          type: number
+        - name: Lower
+          type: number
+        - name: Upper
+          type: number
+          refs:
+              - Aitkin
+
+    - name:  ctt3
+      title: Variance analyses for Odds and Cross tabulation (Odds Ratio)
+      type: Table
+      visible: false
+      rows:  4
+      clearWith:
+          - cc
+      columns:
+        - name: var
+          title: ''
+          type: text
+        - name: Sv
+          title: S
+          type: number
+        - name: X2
+          title: χ²
+          type: number
+        - name: dfv
+          title: df
+          type: integer
+        - name: pv
+          title: p
+          type: number
+          format: zto,pvalue
+        - name: pv1
+          title: 1 - p
+          type: number
+          format: zto,pvalue
+          refs:
+              - EdwardsVA
+
+
+    - name: plotc
+      title: '`Likelihood function for Odds with S-{lint} support interval`'
+      type: Image
+      width:  500
+      height: 400
+      renderFun: .plotc
+      visible: false
+      
+...

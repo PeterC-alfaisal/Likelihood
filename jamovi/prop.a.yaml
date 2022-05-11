@@ -1,0 +1,102 @@
+---
+name:  prop
+title: LR One-Way Analysis
+menuGroup: Likelihood
+menuSubgroup: Categorical Data
+menuTitle: LR One-Way Analysis
+version: '1.0.0'
+jas: '1.2'
+
+description:
+    main: >
+        The one-way analysis examines how well the observed proportions match those expected according to a null
+        hypothesis or a specified hypothesis. 
+
+completeWhenFilled: true
+
+formula:
+    counts:
+        from: lhs
+        subset: 1
+    var:
+        from: rhs
+        subset: 1
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: the data as a data frame
+
+    - name: var
+      title: Variable
+      type: Variable
+      suggested:
+        - nominal
+        - ordinal
+      permitted:
+        - factor
+
+    - name: counts
+      title: Counts (optional)
+      type: Variable
+      default:
+      permitted:
+        - numeric
+      description:
+          R: >
+            the counts in `data`
+
+    - name: expected
+      title: Expected counts
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` or `FALSE` (default), whether expected counts should be displayed
+
+    - name: bi
+      title: Binomial
+      type: Bool
+      default: false
+
+    - name: ciWidth
+      title: Likelihood-based confidence interval
+      type: Number
+      min: 50
+      max: 99.9
+      default: 95
+      description:
+          R: >
+            a number between 50 and 99.9 (default: 95), width of the confidence
+            intervals to provide
+            
+    - name: lint
+      type: Number
+      title: Likelihood interval support level
+      min: 1
+      max: 10
+      default: 2
+
+    - name: pll
+      title: Likelihood function
+      type: Bool
+      default: false
+
+    - name: ratio
+      title: Expected Proportions for Alt. H
+      type: Array
+      template:
+          type: Number
+          min: 0
+          default: 1
+      default:
+      description:
+          R: >
+            a vector of numbers: the expected proportions
+
+    - name: varA
+      title: Variance analysis
+      type: Bool
+      default: false
+...

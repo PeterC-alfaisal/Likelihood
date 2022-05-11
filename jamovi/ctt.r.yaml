@@ -1,0 +1,127 @@
+---
+name:  ctt
+title: Odds Ratio
+jrs:   '1.1'
+
+items:
+
+    - name: freqs
+      title: Contingency Table
+      type: Table
+      description: a proportions table
+      columns: [ ]
+      clearWith:
+        - rows
+        - cols
+        - counts
+
+    - name:  text
+      title: Log likelihood ratio analysis
+      type:  Preformatted
+
+    - name:  cttma
+      title: Marginal main effects and interaction analyses
+      type: Table
+      rows:  4
+      columns:
+        - name: var
+          title: Component
+          type: text
+        - name: Value
+          title: Expected value
+          type: number
+        - name: S
+          type: number
+        - name: G
+          type: number
+        - name: df
+          type: number
+        - name: p
+          type: number
+          format: zto,pvalue
+          refs:
+              - EdwardsCT
+
+    - name:  ctt
+      title: Odds Ratio analyses
+      type: Table
+      rows:  3
+      columns:
+        - name: var
+          title: ''
+          type: text
+        - name: Value
+          title: OR Value
+          type: number
+        - name: ordiff
+          title: Difference
+          type: number
+        - name: S
+          type: number
+        - name: G
+          type: number
+        - name: df
+          type: number
+        - name: p
+          type: number
+          format: zto,pvalue
+
+    - name:  ctt2
+      title: Support and likelihood-based confidence intervals for OR
+      type: Table
+      rows:  2
+      columns:
+        - name: Interval
+          title: Type of interval
+          type: text
+        - name: Level
+          type: text
+        - name: OR
+          type: number
+        - name: Lower
+          type: number
+        - name: Upper
+          type: number
+          refs:
+              - Aitkin
+
+    - name:  ctt3
+      title: Variance analysis
+      type: Table
+      visible: false
+      rows:  1
+      clearWith:
+          - cc
+      columns:
+        - name: var
+          title: ''
+          type: text
+        - name: Sv
+          title: S
+          type: number
+        - name: X2
+          title: χ²
+          type: number
+        - name: dfv
+          title: df
+          type: number
+        - name: pv
+          title: p
+          type: number
+          format: zto,pvalue
+        - name: pv1
+          title: 1 - p
+          type: number
+          format: zto,pvalue
+          refs:
+              - EdwardsVA
+
+    - name: plotc
+      title: Likelihood function for OR with S-level support interval
+      type: Image
+      width:  500
+      height: 400
+      renderFun: .plotc
+      visible: false
+      
+...

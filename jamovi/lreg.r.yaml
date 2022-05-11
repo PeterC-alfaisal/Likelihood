@@ -1,0 +1,71 @@
+---
+name:  Lreg
+title: LR Regression
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: Log likelihood ratio analysis
+      type:  Preformatted
+      
+    - name:  lreg
+      title: Polynomial Regression
+      type: Table
+      rows:  4
+      columns:
+        - name: var
+          title: Model Comparisons
+          type: text
+        - name: S
+          type: number
+        - name: Sc
+          type: number
+        - name: Param
+          type: number
+        - name: r2
+          title: R²
+          type: number
+        - name: aic
+          title: AIC
+          type: number
+        - name: df
+          type: integer
+        - name: p
+          type: number
+          format: zto,pvalue
+
+    - name: coef
+      title: '`Model Coefficients - ${ dep }`'
+      description: a table of model coefficients
+      clearWith:
+        - dep
+        - lint
+      type: Table
+      rows:  5
+      columns:
+        - name: var
+          title: Predictor
+          type: text
+        - name: Estimate
+          type: number
+        - name: SE
+          type: number
+        - name: S
+          type: number
+        - name: Lower
+          type: number
+        - name: Upper
+          type: number
+        - name: p
+          type: number
+          format: zto,pvalue
+
+    - name: plot
+      title: Scatterplot with Model fits
+      type: Image
+      width:  500
+      height: 450
+      renderFun: .plot
+      visible: false
+
+...

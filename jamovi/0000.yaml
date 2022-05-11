@@ -1,0 +1,128 @@
+---
+title: Likelihood Analyses for Common Statistical Tests
+name: Likelihood
+version: 0.0.1
+jms: '1.0'
+authors:
+  - Peter Cahusac
+maintainer: The package maintainer <peteqsac@gmail.com>
+date: '2022-05-05'
+type: R
+description: >-
+  A collection of functions that calculate the log likelihood for a range of
+  statistical tests.  The evidential approach used is based on books
+  "Likelihood" by A.W.F. Edwards (1992), "Statistical Evidence" by R. Royall
+  (1997). This module/package accompanies "Evidence-Based Statistics" by P.
+  Cahusac (2020). The purpose of analyses is to compare hypotheses or models.
+  Nulls, hypotheses and models can be specified in the analyses, and the
+  relative evidence obtained. The log likelihood or support, is denoted by S in
+  all the analyses. Values can range from -ve infintity to +ve infinity. A +ve
+  value of S indicates greater support for one hypothesis over another.  A -ve
+  value of S indicates greater support for the second hypothesis. Zero indicates
+  no evidence either way.  A value of S exceeding the range -2 < 0 < 2 indicates
+  moderate evidence. Stronger evidence is indicated by S values  exceeding the
+  range -3 < 0 < 3, and so on. Likelihood intervals are represented by Support
+  intervals, where an S-2  interval indicates hypothesis estimates that are
+  consistent within the range -2 < 0 < 2 for S, and S-3 within a range  -3 < 0 <
+  3. Some S values are corrected to Sc for the number of parameters in the
+  models being compared. 
+analyses:
+  - title: LR Related Samples t-Test
+    name: lrttest
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR Related Samples t-Test
+    menuSubgroup: t tests
+    description: >
+      Related samples analysis where null and alternative hypotheses can be
+      specified.
+  - title: LR Independent Samples t-Test
+    name: l2sttest
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR Independent Samples t-Test
+    menuSubgroup: t tests
+    description: >
+      Independent samples analysis where null and alternative hypotheses can be
+      specified.
+  - title: LR One Sample t-Test
+    name: lttest
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR One Sample t-Test
+    menuSubgroup: t tests
+    description: >
+      One sample analysis where null and alternative hypotheses can be
+      specified.
+  - title: One-Way ANOVA
+    name: laov1w
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR One-Way ANOVA
+    menuSubgroup: ANOVA
+    description: |
+      The Analysis of Variance (ANOVA) is used to explore the relationship
+      between a continuous dependent variable, and one or more categorical
+      explanatory variables. This 'One-Way ANOVA' is a simplified version of
+      the 'normal' ANOVA, allowing only a single explanatory factor and.
+      dependent variables. Contrasts can be specified whose weights should sum
+      to zero, but do not need to be orthogonal to each other. Support values, 
+      S, represent log likelihood ratio. They are given for each model 
+      comparison. Sc represent Akaike corrected values according to the 
+      number of parameters
+  - title: LR Polynomial Regression
+    name: Lreg
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuSubgroup: Regression & Correlation
+    menuTitle: LR Polynomial Regression
+    description: >
+      Polynomial regression of two variables where different orders can be
+      compared.
+  - title: LR Correlation
+    name: Lcorr
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuSubgroup: Regression & Correlation
+    menuTitle: LR Correlation
+    description: >
+      Bivariate correlation analysis where an alternative hypothesis correlation
+      can be specified.
+  - title: LR One-Way Analysis
+    name: prop
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR One-Way Analysis
+    menuSubgroup: Categorical Data
+    description: >
+      The one-way analysis examines how well the observed proportions match
+      those expected according to a null hypothesis or a specified hypothesis. 
+  - title: LR McNemar Paired Test
+    name: mcnem
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR McNemar Paired Test
+    menuSubgroup: Categorical Data
+    description: |
+      Paired sample analysis where null and alternative odds can be specified.
+  - title: LR Odds Ratio
+    name: ctt
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR Odds Ratio
+    menuSubgroup: Categorical Data
+    description: |
+      Analysis of a 2 x 2 contingency table using the odds ratio
+  - title: LR Two-Way Association Test
+    name: contab
+    ns: Likelihood
+    menuGroup: Likelihood
+    menuTitle: LR Two-Way Association Test
+    menuSubgroup: Categorical Data
+    description: >
+      Two-way analysis of a contingency table where main effects and interaction
+      can be assessed.
+usesNative: true
+minApp: 1.0.8
+
+...

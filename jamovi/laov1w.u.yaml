@@ -1,0 +1,65 @@
+title: One-Way ANOVA
+name: laov1w
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Dependent Variable
+        children:
+          - type: VariablesListBox
+            name: deps
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Grouping Variable
+        children:
+          - type: VariablesListBox
+            name: group
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Contrast 1
+        children:
+          - type: VariablesListBox
+            name: con1
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Contrast 2
+        children:
+          - type: VariablesListBox
+            name: con2
+            maxItemCount: 1
+            isTarget: true
+
+  - type: LayoutBox
+    margin: large
+    stretchFactor: 1
+    children:
+      - type: LayoutBox
+        cell:
+          column: 0
+          row: 0
+        stretchFactor: 1
+        children:
+          - type: Label
+            label: Additional Statistics
+            children:
+              - type: CheckBox
+                name: desc
+              - type: CheckBox
+                name: descPlot
+          - type: Label
+            label: Assumption Checks
+            children:
+              - type: CheckBox
+                name: eqv
+              - type: CheckBox
+                name: norm
+              - type: CheckBox
+                name: qq
