@@ -73,6 +73,8 @@ The analyses in the module complement my recent book: [Cahusac, P.M.B.
 [Amazon.co.uk](https://www.amazon.co.uk/Evidence-Based-Statistics-Introduction-Evidential-Statistical/dp/1119549809/)  
 
 In jamovi the .jmo module can be sideloaded, and will appear among the other modules.
+Example jamovi analyses with data, from the book, are given in the **Test Data Analyses** folder.
 
 I would be interested in feedback <pcahusac@alfaisal.edu>          Peter Cahusac  
 
+<img src="https://github.com/PeterC-alfaisal/Likelihood/blob/master/jamovi_screen.jpeg" id="id" class="class" style="width:60.0%;height:60.0%" />
