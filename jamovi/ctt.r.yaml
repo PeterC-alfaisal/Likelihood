@@ -117,7 +117,7 @@ items:
               - EdwardsVA
 
     - name: plotc
-      title: Likelihood function for OR with S-level support interval
+      title: '`Likelihood function for OR with S-{lint} support interval`'
       type: Image
       width:  500
       height: 400
